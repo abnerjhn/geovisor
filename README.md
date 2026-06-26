@@ -62,7 +62,7 @@ Configura GitHub para que aloje públicamente tu geovisor de forma gratuita:
 2. En el menú lateral izquierdo, bajo la sección *Code and automation*, haz clic en **Pages**.
 3. En la sección **Build and deployment** -> **Branch**:
    - En *Source*, asegúrate de que esté seleccionado *Deploy from a branch*.
-   - En *Branch*, selecciona la rama que deseas compilar (usa `main` para el geovisor original, o la rama `limpio` si deseas desplegar la versión del Geovisor simplificada).
+   - En *Branch*, selecciona la rama **main**.
    - Deja la carpeta de destino en `/ (root)`.
    - Haz clic en el botón **Save** (Guardar).
 
