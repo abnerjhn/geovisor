@@ -758,13 +758,14 @@ function filtrarCapasPersonalizadas() {
                 const strokeVisible = visible && (c.stroke !== false);
                 const fillVisible = visible && (c.fill !== false);
                 
+                const colorSimb = obtenerColorSimbologia(layer.feature, c);
                 layer.setStyle({
                     stroke: strokeVisible,
-                    color: c.color,
+                    color: c.geomType === 'line' ? colorSimb : c.color,
                     weight: strokeVisible ? c.weight : 0,
                     opacity: strokeVisible ? (c.geomType === 'line' ? c.opacity : 1) : 0,
                     fill: fillVisible,
-                    fillColor: c.fillColor || c.color,
+                    fillColor: colorSimb,
                     fillOpacity: fillVisible ? (c.geomType === 'line' ? 0 : c.fillOpacity) : 0
                 });
                 
