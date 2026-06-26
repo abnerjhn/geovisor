@@ -90,7 +90,7 @@ let appConfig = null; // Guardará la configuración cargada desde configuracion
 
 async function cargarConfiguracionJSON() {
     try {
-        const response = await fetch('configuracion_geovisor.json');
+        const response = await fetch('configuracion_geovisor.json?t=' + Date.now());
         if (response.ok) {
             const rawText = await response.text();
             const cleanText = rawText.replace(/\/\/.*|\/\*[\s\S]*?\*\//g, '');
